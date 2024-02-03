@@ -19,12 +19,19 @@ def pal_up_true(x):
     else:
         return "Не палиндром"
 
-var = int(input("Введите 1, 2 или 3, чтоб выбрать соответствующие функции (5,7,14): "))
+def sort_len_words(x):
+    words = x.split()
+    words.sort(key=len)
+    return " ".join(words)
+
+var = int(input("Введите 1, 2 или 3, чтоб выбрать соответствующие функции (задачи 5,7,14): "))
 a = input("Введите строку: ")
 match var:
     case 1:
         print(random_str(a))
     case 2: 
         print(pal_up_true(a))
+    case 3:
+        print(sort_len_words(a))
     case _:
         print("Вы не выбрали функцию")
