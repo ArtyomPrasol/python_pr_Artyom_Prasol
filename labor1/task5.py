@@ -1,6 +1,6 @@
 def find_dates(str):
     import re
-    pat = r'\d{1,2} [А-Я][а-яА-Я]+ \d{4}'
+    pat = r'\d{1,2} [А-Я][а-я]+ \d{4}'
     form = re.findall(pat, str)
     return form
 
