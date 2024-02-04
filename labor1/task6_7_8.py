@@ -29,5 +29,14 @@ def num_in_find_max(x):
             max_posled = i 
     return len(max_posled)
 
+var = int(input("Введите 1, 2 или 3, чтоб выбрать соответствующие функции (задачи 5,7,14): "))
 inputA = input("Введите строку: ")
-print(num_in_find_max(inputA))
+match var:
+    case 1:
+        print(kir_in_find_max(inputA))
+    case 2: 
+        print(find_min_num(inputA))
+    case 3:
+        print(num_in_find_max(inputA))
+    case _:
+        print("Вы не выбрали функцию")
