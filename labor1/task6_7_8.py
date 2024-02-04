@@ -8,5 +8,16 @@ def kir_find_max(x):
             max_posled = i 
     return max_posled
 
+def find_min_num(x):
+    import re
+    pat_split = "[^0-9]"
+    mas = re.split(pat_split, x)
+    min_num = float('inf')
+    for i in mas:
+        if(i!=""):
+            if(int(i)<min_num):
+                min_num = int(i)
+    return min_num
+
 inputA = input("Введите строку: ")
-print(kir_find_max(inputA))
+print(find_min_num(inputA))
