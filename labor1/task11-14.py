@@ -29,10 +29,35 @@ def func3(x):
     return x
 
 
+def func4(x):
+    all_str = ""
+    for stri in x:
+        all_str += stri
+
+    count_all = len(all_str)
+    max_ch = ""
+    max_count = 0
+    
+    while (all_str!=""):
+        count = all_str.count(all_str[0])
+        if(max_count<count):
+            max_ch = all_str[0]
+            max_count = count
+        all_str = all_str.replace(all_str[0],"")
+
+    mas_razn = []
+    max_frq = max_count/count_all
+    for stri in x:
+        mas_razn.append(stri.count(max_ch)/len(stri)-max_frq)
+
+    mas_razn, x = zip(*sorted(zip(mas_razn,x)))
+    return x
+
+
 n = input("Введите количество строк: ")
 list_str = []
 for i in range(int(n)):
     print(i+1)
     strok = input("Введите строку: ")
     list_str.append(strok)
-print(func3(list_str))
+print(func4(list_str))
