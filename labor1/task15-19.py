@@ -31,9 +31,18 @@ def find_R_mas(x):
         down -= 1
 
 
+def find_all_del(x):
+    mas_del = []
+    for i in x:
+        for j in range(1, int(i)+1):
+            if(int(i) % int(j) == 0):
+                if(mas_del.count(j)==0):
+                    mas_del.append(j)
+    return mas_del
+
 n = int(input("Введите количество элементов в массиве: "))
 mas =[]
 for i in range(n):
     print(i+1)
     mas.append(int(input("Введите элемент: ")))
-print(find_R_mas(mas))
+print(find_all_del(mas))
