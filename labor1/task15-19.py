@@ -40,9 +40,19 @@ def find_all_del(x):
                     mas_del.append(j)
     return mas_del
 
+
+def new_mas(x):
+    mas = []
+    for i in x:
+        if (i>=0 and i**2<100 and x.count(i)>=2 and mas.count(i**2)==0):
+            mas.append(i**2)
+    return mas
+            
+
+
 n = int(input("Введите количество элементов в массиве: "))
 mas =[]
 for i in range(n):
     print(i+1)
     mas.append(int(input("Введите элемент: ")))
-print(find_all_del(mas))
+print(new_mas(mas))
