@@ -49,10 +49,24 @@ def new_mas(x):
     return mas
             
 
+var = int(input("Введите 1, 2, 3, 4 или 5, чтоб выбрать соответствующие функции: "))
 
 n = int(input("Введите количество элементов в массиве: "))
 mas =[]
 for i in range(n):
     print(i+1)
     mas.append(int(input("Введите элемент: ")))
-print(new_mas(mas))
+
+match var:
+    case 1:
+        print(find_except(mas))
+    case 2: 
+        print(find_two_min_elem(mas))
+    case 3:
+        print(find_R_mas(mas))
+    case 4:
+        print(find_all_del(mas))
+    case 5:
+        print(new_mas(mas))
+    case _:
+        print("Вы не выбрали функцию")
