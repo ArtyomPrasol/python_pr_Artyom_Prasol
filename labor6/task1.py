@@ -1,8 +1,10 @@
 import sqlite3
 from http.server import HTTPServer, CGIHTTPRequestHandler
-import cgitb
 
-cgitb.enable() 
+server_address = ("", 8000)
+httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
+httpd.serve_forever()
+
 
 # db = sqlite3.connect("fitness_gym.db")
 # cursor = db.cursor()
@@ -75,7 +77,3 @@ cgitb.enable()
 #         print("Запрос не был выбран!")
 
 # db.close()
-
-server_address = ("", 8000)
-httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
-httpd.serve_forever()

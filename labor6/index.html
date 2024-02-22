@@ -5,7 +5,15 @@
 <title>Gym</title>
 </head>
 <body>
-    <a href="/cgi_bin/form.py">Next</a>
+    <form action="/cgi-bin/form.py">
+        <label>
+            Гость: <br>
+            <input name="fio" placeholder="Введите ФИО">
+            <input name="number" placeholder="Введите номер телефона">
+            <input name="adress" placeholder="Введите адрес">
+            <input name="age" placeholder="Введите возраст">
+        </label><br><br>
+        <input type="submit" value="Добавить">
     </form>
 </body>
 </html>
