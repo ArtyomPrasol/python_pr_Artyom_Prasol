@@ -1,4 +1,3 @@
-import cgi
 import sqlite3
 
 db = sqlite3.connect("fitness_gym.db")

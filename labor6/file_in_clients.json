@@ -1,0 +1,27 @@
+{ "Client":
+    [
+        {
+            "id": 9,
+            "client_name": "Андрей",
+            "adress": "ул. Ставропольская",
+            "phone_number": 84951110006, 
+            "age": 31
+        },
+
+        {
+            "id": 10,
+            "client_name": "Дмитрий",
+            "adress": "ул. Железная",
+            "phone_number": 84951110016, 
+            "age": 23
+        },
+
+        {
+            "id": 11,
+            "client_name": "Антон",
+            "adress": "ул. Стальная",
+            "phone_number": 84951110063, 
+            "age": 45
+        }
+    ]
+}

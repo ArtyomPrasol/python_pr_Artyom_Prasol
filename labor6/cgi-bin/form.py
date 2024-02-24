@@ -23,4 +23,4 @@ if(all((name,num,adr,age))):
 db.close()
 
 print('Content-type: text/html\n')
-print('<meta http-equiv="refresh" content="0; url=/">')
+print('<meta http-equiv="refresh" content="0; url=/index.html">')

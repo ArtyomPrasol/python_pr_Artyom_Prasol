@@ -1,0 +1,46 @@
+{
+    "Client": [
+        {
+            "id": 1,
+            "client_name": "Ваня",
+            "adress": "ул. Пашковская",
+            "phone_number": 891834567,
+            "age": 23
+        },
+        {
+            "id": 2,
+            "client_name": "Дима",
+            "adress": "ул. Кировская",
+            "phone_number": 12315125612,
+            "age": 29
+        },
+        {
+            "id": 3,
+            "client_name": "Саша",
+            "adress": "ул. Зиповская",
+            "phone_number": 89005553535,
+            "age": 21
+        },
+        {
+            "id": 9,
+            "client_name": "Андрей",
+            "adress": "ул. Ставропольская",
+            "phone_number": 84951110006,
+            "age": 31
+        },
+        {
+            "id": 10,
+            "client_name": "Дмитрий",
+            "adress": "ул. Железная",
+            "phone_number": 84951110016,
+            "age": 23
+        },
+        {
+            "id": 11,
+            "client_name": "Антон",
+            "adress": "ул. Стальная",
+            "phone_number": 84951110063,
+            "age": 45
+        }
+    ]
+}

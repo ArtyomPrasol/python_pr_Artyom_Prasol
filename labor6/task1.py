@@ -1,13 +1,48 @@
 import sqlite3
 from http.server import HTTPServer, CGIHTTPRequestHandler
 
+db = sqlite3.connect("fitness_gym.db")
+cur = db.cursor()
+
+cur.execute("""
+CREATE TABLE Client(
+               id INTEGER PRIMARY KEY AUTOINCREMENT,
+               client_name TEXT NOT NULL,
+               adress TEXT NOT NULL,
+               phone_number INTEGER NOT NULL,
+               age INTEGER NOT NULL
+)
+""")
+cur.execute("""
+CREATE TABLE Subscription(
+               id INTEGER PRIMARY KEY AUTOINCREMENT,
+               name TEXT NOT NULL,
+               price INTEGER NOT NULL,
+               num_days INTEGER
+)
+""")
+cur.execute("""
+CREATE TABLE Saled_subs(
+               id_card INTEGER PRIMARY KEY AUTOINCREMENT,
+               id_client INTEGER,
+               id_sub INTEGER,
+               date_start DATE NOT NULL,
+               date_end DATE NOT NULL,
+               FOREIGN KEY (id_client)  REFERENCES Client (id),
+               FOREIGN KEY (id_sub)  REFERENCES Subscription (id)
+)
+""")
+
+cur.execute("INSERT INTO Client (client_name, adress, phone_number, age) VALUES ('Ваня','ул. Пашковская',891834567,23),('Дима','ул. Кировская',12315125612,29),('Саша','ул. Зиповская',89005553535,21)")
+cur.execute("INSERT INTO Subscription (name, price, num_days) VALUES ('Недельный', 1500, 7), ('Месяц', 4000, 30), ('Годовой', 8000, 365)")
+cur.execute("INSERT INTO Saled_subs (id_client, id_sub, date_start, date_end) VALUES (1,1,'2024-02-18', '2024-02-25'), (2,1,'2024-02-11', '2024-02-18'), (3,2,'2024-02-05','2024-03-06')")
+
+db.commit()
+db.close()
+
 server_address = ("", 8000)
 httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
 httpd.serve_forever()
-
-
-# db = sqlite3.connect("fitness_gym.db")
-# cur = db.cursor()
 
 #Ввод таблиц
 # cur.execute("""
