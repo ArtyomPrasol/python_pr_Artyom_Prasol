@@ -12,6 +12,24 @@ class Rectangle:
         self.x += x1
         self.y += y1
     
+    def getX():
+        return x
+    def getY():
+        return y
+    def getH():
+        return h
+    def getW():
+        return w
+    
+    def setX(self, x):
+        self.x = x
+    def setY(self, y):
+        self.y = y
+    def setW(self, w):
+        self.w = w
+    def setH(self, h):
+        self.h = h
+
     def print(self):
         print("\nx1 = ", self.x, " y1 = ", self.y)
         print("x2 = ", self.x+self.w, " y2 = ", self.y)
