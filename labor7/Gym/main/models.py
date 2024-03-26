@@ -9,8 +9,11 @@ class Client(models.Model):
     phone_num = models.IntegerField()
     age = models.IntegerField()
 
-    def __str__(self) -> str:
-        return super().__str__()
+    def title(self) -> str:
+        return self.cl_name
+
+    def description(self) -> str:
+        return f"{self.cl_id} ; {self.cl_name} {self.adress} {self.phone_num} {self.age}"
     
     def get_absolute_url(self):
         return reverse("client_info", kwargs={"pk": self.pk})

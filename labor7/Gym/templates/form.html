@@ -8,7 +8,7 @@
     <h2>Clients</h2>
     <ul>
         {% for item in client_data %}
-            <li>{{ item.cl_id }} - {{ item.cl_name }}</li>
+            <li><a href="{% url 'detail_client' pk=item.pk %}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
 
