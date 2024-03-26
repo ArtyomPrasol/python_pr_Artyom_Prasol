@@ -4,6 +4,27 @@
 	<title>Gym</title>
   </head>
   <body>
-	<h1>Hello world</h1>
+    <h1>Data:</h1>
+    <h2>Clients</h2>
+    <ul>
+        {% for item in client_data %}
+            <li>{{ item.cl_id }} - {{ item.cl_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Subs</h2>
+    <ul>
+        {% for item in subs_data %}
+            <li>{{ item.sub_id }} - {{ item.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Cards</h2>
+    <ul>
+        {% for item in sailed_data %}
+            <li>{{ item.card_id }} - {{ item.date_start }}</li>
+        {% endfor %}
+    </ul>
+
   </body>
 </html>
